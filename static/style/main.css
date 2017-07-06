@@ -1,0 +1,320 @@
+@font-face {
+    font-family: lato;
+    src: url(../fonts/Lato-Light.ttf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(../fonts/Oswald-Light.ttf);
+}
+
+
+@keyframes float {
+	0% {
+		transform: translate3d(-20px, 20px, 0px);
+		-webkit-transform: rotate(2deg);
+		animation-timing-function: linear;
+	}
+	35% {
+		transform: translate3d(0px, -10px, 0px);
+		animation-timing-function: linear;
+	}
+	50% {
+		transform: translate3d(20px, 10px, 0px);
+		-webkit-transform: rotate(-2deg);
+		animation-timing-function: linear;
+	}
+	85% {
+		transform: translate3d(-30px, -10px, 0px);
+		animation-timing-function: linear;
+	}
+	100% {
+		transform: translate3d(-20px, 20px, 0px);
+		-webkit-transform: rotate(2deg);
+	}
+}
+
+body {
+    background: white;
+}
+
+p {
+	font-family: OpenSans, sans-serif;
+}
+
+
+/* ############### Side Menu ################ */
+
+header {
+	position: fixed;
+	width: 360px;
+	height: 100%;
+	background: -webkit-linear-gradient(#505e7c 34.43%, #090b2d 100%);
+	text-align: center;
+	padding-bottom: 2em;
+	box-shadow: inset 0px -100px 100px -100px #FFFFFF;
+	z-index: 1;
+	box-shadow: 0px 0px 13px black;
+}
+
+/* ############### Logo ################ */
+
+#logo {
+	background: #0fb668;
+	box-sizing: border-box;
+	border-bottom: 3px solid #FFFFFF;
+	height: 160px;
+	box-shadow: inset 0px -25px 20px -13px #04590b;
+}
+
+#logo h1 {
+	color: #ffffff;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 100;
+	font-size: 3em;
+	position: relative;
+	padding-top: 4px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	border-radius: 0 0 30% 30%;
+	-webkit-border-radius: 0 0 30% 30%;
+	-moz-border-radius: 0 0 30% 30%;
+}
+
+#logo h2 {
+	color: #ffffff;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 100;
+	font-size: 2em;
+	position: relative;
+	padding-top: 4px;
+}
+
+/* ############### Navigation Menus ################ */
+
+nav {
+	height: 69%;
+	overflow: scroll;
+}
+
+.nav-headlin-list {
+	list-style-type: none;
+	margin: 20px 0px 0px 0px;
+	overflow: hidden;
+}
+
+
+.nav-headline-box {
+	display: block;
+	margin:31px 30px;
+	padding: 20px 15px;
+	background: #ebf4f9;
+	box-shadow: -4px 4px 4px rgba(91, 91, 91, 0.6);
+	border-radius: 0px 0px 23px 0px;
+	-webkit-border-radius: 0px 0px 23px 0px;
+	-moz-border-radius: 0px 0px 23px 0px;
+	border-top: 3px solid #17e987;
+	cursor: default;
+	text-align: left;
+}
+
+.nav-headline {
+	font-family: 'lato', sans-serif;
+	font-weight: bold;
+	font-size: 1.7em;
+	color: #000000;
+	transition: text-shadow 0.4s, color 0.4s; 
+	margin: 0px 2px;
+}
+
+.nav-headline:hover {
+	text-shadow: 0 0 5px white;
+	color: #e51e5e;
+}
+
+.nav-headline-collaps {
+	background: #0fb668;
+	display: inline-block;
+	height: 27px;
+	width: 27px;
+	line-height: 10px;
+	border-radius: 100%;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	text-align: left;
+	color: white;
+	font-family: 'lato', sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 5px 0 0;
+	border: none;
+	cursor: cell;
+}
+
+.collaps {
+	background: rgba(188, 186, 186, 0.41);
+	padding: 20px 15px;
+	margin: -32px 49px 14px 30px;
+	list-style: none;
+	font-family: 'lato', sans-serif;
+	display: none;
+}
+
+.nav-subcategory {
+	font-size: 1.5em;
+	color: white;
+}
+
+/* ############### Footer Developer Menu ################ */
+
+footer {
+	display: block;
+	border-top: 1px solid white;
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+footer div {
+	display: inline-block;
+	width: 20%;
+	margin: 3%;
+	box-sizing: border-box;
+}
+
+footer img {
+	width: 100%;
+}
+
+
+/* ############### Top Info Bar ################ */
+
+#user_info {
+	position: fixed;
+	display: block;
+	width: 100%;
+	line-height: 3;
+	top: 0px;
+	right: 0px;
+	color: #192237;
+	border-bottom: 1px solid #192237;
+}
+
+#user_info ul {
+	display: flex;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	line-height: 3;
+	width: 100%;
+}
+
+#user_info li {
+	display: inline-block;
+	font-family: 'lato', sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#user_name {
+	margin-left: 380px;
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	-moz-flex-grow: 1;
+	-ms-flex-grow: 1;
+}
+
+#path {
+	text-align: center;
+	flex-grow: 2;
+	-webkit-flex-grow: 2;
+	-moz-flex-grow: 2;
+	-ms-flex-grow: 2;
+}
+
+#userInfo_time {
+	flex-grow: 1;
+	-webkit-flex-grow: 1;
+	-moz-flex-grow: 1;
+	-ms-flex-grow: 1;
+	text-align: center;
+}
+
+
+/* ############################### 
+	Desktop
+############################ */
+
+#desktop-container {
+	padding-left: 360px;
+	padding-top: 87px;
+	width: 100%;
+	display: block;
+	position: fixed;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+#desktop {
+	box-sizing: border-box;
+	display: block;
+	height: 100%;
+	overflow: scroll;
+}
+
+#tool_headline {
+	font-family: 'lato', sans-serif;
+}
+
+
+/* ############################### OLD CSS ##################### */
+
+#background-image {
+	position: absolute;
+	width: 100%;
+	height: 900px;
+	background-image: linear-gradient(rgba(51,102,255,0.1) 30%, black 100%),
+			  url(./Images/main.jpg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: 100%;
+}
+
+
+#commingSoon {
+	display: block;
+	position: relative;
+	top: 45%;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	text-align: center;
+}
+
+#commingSoon  h2 {
+	font-family: 'OpenSans', sans-serif;
+	font-size: 90px;
+	color: #E0E0E0;
+	text-shadow: 0 0 5px lightgrey;
+	animation: float 8s infinite;
+}
+
+.ToolBox {
+	background: rgba(0,0,0,0.3);
+	padding: 60px 50px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}

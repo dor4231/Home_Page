@@ -1,0 +1,48 @@
+$def with (grid_layout, navigation, user_name, path, footer, tool_style)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta>
+        <title>Dor Bar | Web Developer | $path</title>
+		<link rel="stylesheet" type="text/css" href="../static/style/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../static/style/grid.css">
+        <link rel="stylesheet" type="text/css" href="../static/style/main.css">
+        <link rel="stylesheet" type="text/css" href="../static/style/$:tool_style">
+        <script src="../static/js/main.js"></script>
+    </head>
+    <body onload="startTime()">
+		<header>
+			<div id="logo">
+				<h1>Dor Bar</h1>
+				<h2>Web Developer</h2>
+			</div>
+			<nav>
+				$:navigation
+			</nav>
+			<footer>
+				$:footer
+			</footer>
+		</header>
+		<section id="user_info">
+			<ul>
+				<li id="user_name">
+					<span>$user_name</span>
+					<input type="button" value="^" onclick="">
+				</li>
+				<li id="path">
+					<h2>$path</h2>
+				</li>
+				<li id="userInfo_time">
+					<span id="time"></span>
+				</li>
+			</ul>
+		</section>
+		<section id="desktop-container">
+			<div id="desktop" class="grid-container outline">
+				$:grid_layout
+			</div>
+		</section>
+		
+    </body>
+</html>

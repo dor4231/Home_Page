@@ -1,0 +1,173 @@
+$def with ()
+$#<head>
+$#	<link rel="stylesheet" type="text/css" href="../../static/style/setup.css">
+$#</head>
+
+<h2 class="tool-headline">Get Your Environmant Ready</h2>
+<div  class="tool-description">
+	<p>
+		Just enter the environmant credentials, select the scripts and configuration you need
+		and submit to get it ready to test.
+	</p>
+</div>
+<div class="ToolBox" id="setupTool">
+	<form action="setup" method="POST">
+		<legend name="credentials"><span class="number">1</span>Enter Environment Credentials:</legend>
+		<div class="form-container credentials">
+			<div class="form-box" id="console-box">	
+				<span>Console IP Address:</span><br>
+				<select	name="console">
+					<option value="None">Select Your Console</option>
+					<option value="192.168.64.251/root/1234">TUSTUS</option>
+					<option value="192.168.64.250/root/1234">VESPA</option>
+					<option value="192.168.16.187/root/1234">DIGI</option>		
+				</select>
+			</div>
+			<div class="form-box">	
+				<span>DUT Console Port:</span><br>
+				<input  type="text" 
+						value="oc...?"
+						name="oc" 
+						onfocus="if (this.value=='oc...?') this.value='';" 
+						onblur="if (this.value=='') this.value='oc...?';"/>
+			</div>
+			<div class="form-box">	
+				<span>DUT IP Address:</span><br>
+				<input  type="text" 
+						value="Enter IP Address"
+						name="ipaddr" 
+						onfocus="if (this.value=='Enter IP Address') this.value='';" 
+						onblur="if (this.value=='') this.value='Enter IP Address';"/>
+			</div>
+			<div class="form-box">
+				<span>User Name:</span><br>
+				<input type="text" 
+					   value="admin" 
+					   name="user_name" 
+					   onfocus="if (this.value=='admin') this.value='';" 
+					   onblur="if (this.value=='') this.value='admin';"/>	 
+			</div>
+			<div class="form-box">
+				<span>Password:</span><br>
+				<input type="text" 
+					   name="passwd"
+					   value="1234"
+					   onfocus="if (this.value=='1234') this.value='';"
+					   onblur="if (this.value=='') this.value='1234';"/>
+			</div>
+		</div>
+		
+		<legend name="credentials"><span class="number">2</span>Select Your Scripts:</legend>
+		<div class="form-container scripts">
+			<ul class="form-box">
+				<span class="form-headline">Basic</span>
+				<li>
+					<input type="checkbox" 
+						   id="clear" 
+						   value="clear_conns" 
+						   name="selected_scripts">
+					<label class="light" for="clear">Clear Connections</label>
+				</li>
+				<li>
+					<input type="checkbox" 
+						   id="perf_info" 
+						   value="perf_info" 
+						   name="selected_scripts">
+					<label class="light" for="perf_info">Performance Info</label>
+				</li>
+				<li>
+					<input type="checkbox" 
+						   id="ethtool" 
+						   value="ethtool" 
+						   name="selected_scripts">
+					<label class="light" for="ethtool">Interfaces-Tool</label>
+				</li>
+				<li>
+					<input type="checkbox" 
+						   id="ctl" 
+						   value="ctl" 
+						   name="selected_scripts">
+					<label class="light" for="ctl">ctl</label>
+				</li>
+			</ul>
+			<ul class="form-box">
+				<span class="form-headline">Debug</span>
+				<li>
+					<input type="checkbox" 
+						   id="oprofile" 
+						   value="oprofile" 
+						   name="selected_scripts">
+					<label class="light" for="oprofile">Oprofile</label>
+				</li>
+				<li>
+					<input type="checkbox" 
+						   id="flufiler" 
+						   value="flufiler" 
+						   name="selected_scripts">
+					<label class="light" for="flufiler">Flufiler</label>
+				</li>
+			</ul>
+			</ul>
+			<ul class="form-box">
+				<span class="form-headline">Sizing</span>
+				<li>
+					<input type="checkbox" 
+						   id="rules_creator" 
+						   value="rules_creator" 
+						   name="selected_scripts">
+					<label class="light" for="rules_creator">Rules-Creator</label>
+				</li>
+				<li>
+					<input type="checkbox" 
+						   id="100rules" 
+						   value="100rules" 
+						   name="selected_scripts">
+					<label class="light" for="100rules">100 Rules</label>
+				</li>
+			</ul>
+			<ul class="form-box">
+				<span class="form-headline">UDP</span>
+				<li>
+					<input type="checkbox" 
+						   id="imix" 
+						   value="imix" 
+						   name="selected_scripts">
+					<label class="light" for="imix">iMIX</label>
+				</li>
+				<li>
+					<input type="checkbox" 
+						   id="performance_tool" 
+						   value="performance_tool" 
+						   name="selected_scripts">
+					<label class="light" for="performance_tool">Performance Tool</label>
+				</li>
+			</ul>
+		</div>
+		<legend name="credentials"><span class="number">3</span>Select Your Configuration:</legend>
+		<div class="form-container configuration">
+			<div class="form-box">
+				<input type="radio"
+					   name="configuration"
+					   id="2IN-2OUT"
+					   value="2IN-2OUT">
+				<label class="light" for="2IN-2OUT">2IN-2OUT</label>
+			</div>
+			<div class="form-box">
+				<input type="radio"
+					   name="configuration"
+					   id="6IN-6OUT"
+					   value="6IN-6OUT">
+				<label class="light" for="6IN-6OUT">6IN-6OUT</label>
+			</div>
+			<div class="form-box">
+				<input type="radio"
+					   name="configuration"
+					   id="none"
+					   value="None">
+				<label class="light" for="none">Don't Configure</label>
+			</div>
+		</div>
+		
+		<button type="submit">Submit</button>
+	</form>
+</div>
